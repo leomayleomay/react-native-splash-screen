@@ -10,5 +10,10 @@
 'use strict';
 
 import { NativeModules } from 'react-native';
-export default NativeModules.SplashScreen;
+const SplashScreenModule = NativeModules.SplashScreen;
 
+export default class SplashScreen {
+    static hide() {
+        SplashScreenModule.hide()
+    }
+}
